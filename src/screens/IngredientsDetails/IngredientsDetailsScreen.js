@@ -76,7 +76,7 @@ var styles = StyleSheet.create({
   title: {
     margin: 10,
     marginBottom: 5,
-    color: 'black',
+    color: 'blue',
     fontSize: 13,
     textAlign: 'center'
   },

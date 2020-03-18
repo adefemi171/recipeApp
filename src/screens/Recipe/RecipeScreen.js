@@ -186,7 +186,7 @@ var styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     margin: 10,
-    color: '#2cd18a'
+    color: 'green'
   },
   infoDescriptionRecipe: {
     textAlign: 'left',
@@ -198,7 +198,7 @@ var styles = StyleSheet.create({
     fontSize: 28,
     margin: 10,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'blue',
     textAlign: 'center'
   }
 })

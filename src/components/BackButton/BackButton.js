@@ -27,7 +27,7 @@ var styles = StyleSheet.create({
     padding: 8,
     margin: 10,
     backgroundColor: 'black',
-    shadowColor: 'black',
+    shadowColor: 'blue',
     shadowOffset: {
       width: 0,
       height: 2
