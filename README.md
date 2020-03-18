@@ -68,7 +68,7 @@ JavaScript (React Native), Generated Data from [Firebase Firestore](https://www.
 ### Clone the repository 
 
 ```
-git clone https://github.com/adefemi171/naijahacks-CASS.git
+git clone https://github.com/adefemi171/recipeApp.git
 ```
 
 ### Install all dependencies
