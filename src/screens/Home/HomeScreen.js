@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, ScrollView, Text, View, TouchableHighlight, Image, StyleSheet } from 'react-native';
+
 import { RecipeCard } from '../../AppStyles';
-// import styles from './styles';
 import { recipes } from '../../mockData/data';
 import MenuImage from '../../components/MenuImage/MenuImage';
 import DrawerActions from 'react-navigation';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-// import styles from './styles';
+
 import MenuButton from '../../components/MenuButton/MenuButton';
 
 export default class DrawerContainer extends React.Component {
@@ -12,7 +12,7 @@ export default class DrawerContainer extends React.Component {
         <View style={styles.container}>
           <MenuButton
             title="HOME"
-            source={require('../../../assets/img/home.png')}
+            source={require('../../../assets/img/homeIcon.png')}
             onPress={() => {
               navigation.navigate('Home');
               navigation.closeDrawer();
@@ -20,7 +20,7 @@ export default class DrawerContainer extends React.Component {
           />
           <MenuButton
             title="CATEGORIES"
-            source={require('../../../assets/img/category.png')}
+            source={require('../../../assets/img/categoryIcon.png')}
             onPress={() => {
               navigation.navigate('Categories');
               navigation.closeDrawer();

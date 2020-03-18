@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableHighlight, Image, Text, View, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-// import styles from './styles';
+
 
 export default class MenuButton extends React.Component {
   render() {

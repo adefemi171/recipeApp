@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, Text, View, Image, TouchableHighlight, StyleSheet, Dimensions } from 'react-native';
-// import styles from './styles';
+
 import { getIngredientName, getAllIngredients, } from '../../mockData/dataApi';
 
 

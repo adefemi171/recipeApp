@@ -1,13 +1,13 @@
 import React from 'react';
 import { TouchableHighlight, Image, Text, View, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-// import styles from './styles';
+
 
 export default class BackButton extends React.Component {
   render() {
     return (
       <TouchableHighlight onPress={this.props.onPress} style={styles.btnContainer}>
-        <Image source={require('../../../assets/img/backArrow.png')} style={styles.btnIcon} />
+        <Image source={require('../../../assets/img/backIcon.png')} style={styles.btnIcon} />
       </TouchableHighlight>
     );
   }
@@ -27,7 +27,7 @@ var styles = StyleSheet.create({
     padding: 8,
     margin: 10,
     backgroundColor: 'black',
-    shadowColor: '#000',
+    shadowColor: 'black',
     shadowOffset: {
       width: 0,
       height: 2

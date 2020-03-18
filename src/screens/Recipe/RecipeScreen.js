@@ -5,7 +5,7 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../mockData/dataApi';
 import BackButton from '../../components/BackButton/BackButton';
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
-// import styles from './styles';
+
 
 const { width: viewportWidth } = Dimensions.get('window');
 
@@ -97,7 +97,7 @@ export default class RecipeScreen extends React.Component {
           </View>
 
           <View style={styles.infoContainer}>
-            <Image style={styles.infoPhoto} source={require('../../../assets/img/time.png')} />
+            <Image style={styles.infoPhoto} source={require('../../../assets/img/timeIcon.png')} />
             <Text style={styles.infoRecipe}>{item.time} minutes </Text>
           </View>
 

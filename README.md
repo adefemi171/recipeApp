@@ -28,7 +28,17 @@ JavaScript (React Native), Generated Data from [Firebase Firestore](https://www.
 
     📦recipeApp
         📦assets
-            ┣ 📦img
+            ┗ 📦img
+                ┣ 📜backIcon.png
+                ┣ 📜categoryIcon.png
+                ┣ 📜cancelIcon.png
+                ┣ 📜cookiesIcon.png
+                ┣ 📜homeIcon.png
+                ┣ 📜infoIcon.png
+                ┣ 📜ingredientsIcon.png
+                ┣ 📜listIcon.png
+                ┣ 📜menuIcon.png
+                ┣ 📜timeIcon.png
             ┣ 📜icon.png
             ┣ 📜splash.png
 
@@ -40,11 +50,10 @@ JavaScript (React Native), Generated Data from [Firebase Firestore](https://www.
             ┣ 📦mockData
             ┣ 📦routes
             ┣ 📦screens
-            ┗ 📜AppStyles.js
+            ┣  📜AppStyles.js
             ┗ 📜index.js
         📦web-build
-            ┣ 📜tracer.go
-            ┗ 📜tracer_test.go
+            ┣ 📜register-service-worker.js
         ┣ 📜app.json
         ┣ 📜App.js
         ┣ 📜babel.config.js

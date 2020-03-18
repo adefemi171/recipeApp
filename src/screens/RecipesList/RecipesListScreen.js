@@ -4,8 +4,6 @@ import { FlatList, Text, View, TouchableHighlight, Image, StyleSheet } from 'rea
 import { RecipeCard } from '../../AppStyles';
 import { getRecipes, getCategoryName } from '../../mockData/dataApi';
 
-// import styles from './styles';
-
 export default class RecipesListScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {

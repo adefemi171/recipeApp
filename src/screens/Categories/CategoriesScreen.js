@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  FlatList,
-  Text,
-  View,
-  Image,
-  TouchableHighlight,
-  StyleSheet
-} from 'react-native';
-// import styles from './styles';
+import { FlatList, Text, View, Image, TouchableHighlight, StyleSheet } from 'react-native';
+
 import { categories } from '../../mockData/data';
 import { getNumberOfRecipes } from '../../mockData/dataApi';
 
@@ -56,7 +49,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 215,
-    borderColor: '#cccccc',
+    borderColor: 'ash',
     borderWidth: 0.5,
     borderRadius: 20,
   },
@@ -80,7 +73,7 @@ var styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#333333',
+    color: 'cyan',
     marginTop: 8
   },
   categoriesInfo: {

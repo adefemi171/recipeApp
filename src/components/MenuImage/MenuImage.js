@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-// import styles from './styles';
+
 
 export default class MenuImage extends React.Component {
   render() {
@@ -9,7 +9,7 @@ export default class MenuImage extends React.Component {
       <TouchableOpacity style={styles.headerButtonContainer} onPress={this.props.onPress}>
         <Image
           style={styles.headerButtonImage}
-          source={require('../../../assets/img/menu.png')}
+          source={require('../../../assets/img/menuIcon.png')}
         />
       </TouchableOpacity>
     );
