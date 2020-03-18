@@ -43,14 +43,27 @@ JavaScript (React Native), Generated Data from [Firebase Firestore](https://www.
             ┣ 📜splash.png
 
         📦node_modules
-            ┗ 📜test.html
         📦src
             ┣ 📦components
+                ┗ 📜BackButton.js
+                ┗ 📜MenuButton.js
+                ┗ 📜MenuImage.js
+                ┗ 📜ViewIngredientsButton.js
             ┣ 📦constants
+                ┗ 📜AppStyles.js
             ┣ 📦mockData
+                ┗ 📜data.js
+                ┗ 📜dataApi.js
             ┣ 📦routes
+                ┗ 📜Routes.js
             ┣ 📦screens
-            ┣  📜AppStyles.js
+                ┗ 📜CategoryPage.js
+                ┗ 📜DrawerPage.js
+                ┗ 📜HomePage.js
+                ┗ 📜IngredientPage.js
+                ┗ 📜IngredientsDetailPage.js
+                ┗ 📜RecipePage.js
+                ┗ 📜RecipesListPage.js
             ┗ 📜index.js
         📦web-build
             ┣ 📜register-service-worker.js
