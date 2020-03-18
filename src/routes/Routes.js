@@ -1,28 +1,26 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import {createDrawerNavigator} from 'react-navigation-drawer';
-import HomeScreen from '../screens/Home/HomeScreen';
-import CategoriesScreen from '../screens/Categories/CategoriesScreen';
-import RecipeScreen from '../screens/Recipe/RecipeScreen';
-import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
-import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
-import IngredientScreen from '../screens/Ingredient/IngredientScreen';
-// import SearchScreen from '../screens/Search/SearchScreen';
-import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
+import HomePage from '../screens/HomePage';
+import CategoryPage from '../screens/CategoryPage';
+import RecipePage from '../screens/RecipePage';
+import RecipesListPage from '../screens/RecipesListPage';
+import DrawerPage from '../screens/DrawerPage';
+import IngredientPage from '../screens/IngredientPage';
+import IngredientsDetailPage from '../screens/IngredientsDetailPage';
 
-const MainNavigator = createStackNavigator(
+const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
-    Categories: CategoriesScreen,
-    Recipe: RecipeScreen,
-    RecipesList: RecipesListScreen,
-    Ingredient: IngredientScreen,
-    // Search: SearchScreen,
-    IngredientsDetails: IngredientsDetailsScreen
+    Home: {screen: HomePage},
+    Category: {screen: CategoryPage},
+    Recipe: {screen: RecipePage},
+    RecipesList: {screen: RecipesListPage},
+    Ingredient: {screen: IngredientPage},
+    IngredientsDetail: {screen: IngredientsDetailPage}
   },
   {
     initialRouteName: 'Home',
-    // headerMode: 'float',
+
     defaulfNavigationOptions: ({ navigation }) => ({
       headerTitleStyle: {
         fontWeight: 'bold',
@@ -36,13 +34,13 @@ const MainNavigator = createStackNavigator(
 
 const DrawerStack = createDrawerNavigator(
   {
-    Main: MainNavigator
+    Main: RootStack
   },
   {
     drawerPosition: 'left',
     initialRouteName: 'Main',
     drawerWidth: 250,
-    contentComponent: DrawerContainer
+    contentComponent: DrawerPage
   }
 );
 

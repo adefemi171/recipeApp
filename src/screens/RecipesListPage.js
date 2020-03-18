@@ -1,23 +1,15 @@
 import React from 'react';
-import { FlatList, ScrollView, Text, View, TouchableHighlight, Image, StyleSheet } from 'react-native';
+import { FlatList, Text, View, TouchableHighlight, Image, StyleSheet } from 'react-native';
 
-import { RecipeCard } from '../../AppStyles';
-import { recipes } from '../../mockData/data';
-import MenuImage from '../../components/MenuImage/MenuImage';
-import DrawerActions from 'react-navigation';
-import { getCategoryName } from '../../mockData/dataApi';
+import { RecipeCard } from '../constants/Layout';
+import { getRecipes, getCategoryName } from '../mockData/dataApi';
 
-export default class HomeScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Home',
-    headerLeft: (
-      <MenuImage
-        onPress={() => {
-          navigation.openDrawer();
-        }}
-      />
-    )
-  });
+export default class RecipesListScreen extends React.Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam('title')
+    };
+  };
 
   constructor(props) {
     super(props);
@@ -30,7 +22,7 @@ export default class HomeScreen extends React.Component {
   renderRecipes = ({ item }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressRecipe(item)}>
       <View style={styles.container}>
-        <Image style={styles.photo} source={{ uri: item.photo_url }} />
+        <Image style={styles.pic} source={{ uri: item.photo_url }} />
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
       </View>
@@ -38,13 +30,16 @@ export default class HomeScreen extends React.Component {
   );
 
   render() {
+    const { navigation } = this.props;
+    const item = navigation.getParam('category');
+    const recipesArray = getRecipes(item.id);
     return (
       <View>
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}
           numColumns={2}
-          data={recipes}
+          data={recipesArray}
           renderItem={this.renderRecipes}
           keyExtractor={item => `${item.recipeId}`}
         />
@@ -53,9 +48,10 @@ export default class HomeScreen extends React.Component {
   }
 }
 
+
 var styles = StyleSheet.create({
   container: RecipeCard.container,
-  photo: RecipeCard.photo,
+  pic: RecipeCard.photo,
   title: RecipeCard.title,
   category: RecipeCard.category
 })

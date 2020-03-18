@@ -1,15 +1,23 @@
 import React from 'react';
-import { FlatList, Text, View, TouchableHighlight, Image, StyleSheet } from 'react-native';
+import { FlatList, ScrollView, Text, View, TouchableHighlight, Image, StyleSheet } from 'react-native';
 
-import { RecipeCard } from '../../AppStyles';
-import { getRecipes, getCategoryName } from '../../mockData/dataApi';
+import { RecipeCard } from '../constants/Layout';
+import { recipes } from '../mockData/data';
+import MenuImage from '../components/MenuImage';
+import DrawerActions from 'react-navigation';
+import { getCategoryName } from '../mockData/dataApi';
 
-export default class RecipesListScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      title: navigation.getParam('title')
-    };
-  };
+export default class HomeScreen extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: 'Home',
+    headerLeft: (
+      <MenuImage
+        onPress={() => {
+          navigation.openDrawer();
+        }}
+      />
+    )
+  });
 
   constructor(props) {
     super(props);
@@ -30,16 +38,13 @@ export default class RecipesListScreen extends React.Component {
   );
 
   render() {
-    const { navigation } = this.props;
-    const item = navigation.getParam('category');
-    const recipesArray = getRecipes(item.id);
     return (
       <View>
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}
           numColumns={2}
-          data={recipesArray}
+          data={recipes}
           renderItem={this.renderRecipes}
           keyExtractor={item => `${item.recipeId}`}
         />
@@ -47,7 +52,6 @@ export default class RecipesListScreen extends React.Component {
     );
   }
 }
-
 
 var styles = StyleSheet.create({
   container: RecipeCard.container,

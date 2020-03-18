@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, Text, View, Image, TouchableHighlight, StyleSheet, Dimensions } from 'react-native';
 
-import { getIngredientName, getAllIngredients, } from '../../mockData/dataApi';
+import { getIngredientName, getAllIngredients, } from '../mockData/dataApi';
 
 
 const { width, height } = Dimensions.get('window');
@@ -37,7 +37,7 @@ export default class IngredientsDetailsScreen extends React.Component {
   renderIngredient = ({ item }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressIngredient(item[0])}>
       <View style={styles.container}>
-        <Image style={styles.photo} source={{ uri: item[0].photo_url }} />
+        <Image style={styles.pic} source={{ uri: item[0].photo_url }} />
         <Text style={styles.title}>{item[0].name}</Text>
         <Text style={{ color: 'grey' }}>{item[1]}</Text>
       </View>
@@ -80,7 +80,7 @@ var styles = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center'
   },
-  photo: {
+  pic: {
     width: (SCREEN_WIDTH - RECIPE_ITEM_MARGIN) / numColumns - RECIPE_ITEM_OFFSET,
     height: RECIPE_ITEM_HEIGHT,
     borderRadius: 60

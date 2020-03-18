@@ -9,7 +9,7 @@ export default class MenuImage extends React.Component {
       <TouchableOpacity style={styles.headerButtonContainer} onPress={this.props.onPress}>
         <Image
           style={styles.headerButtonImage}
-          source={require('../../../assets/img/menuIcon.png')}
+          source={require('../../assets/img/menuIcon.png')}
         />
       </TouchableOpacity>
     );

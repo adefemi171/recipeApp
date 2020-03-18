@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlatList, ScrollView, Text, View, Image, TouchableHighlight, StyleSheet } from 'react-native';
 
-import { RecipeCard } from '../../AppStyles';
-import { getIngredientUrl, getRecipesByIngredient, getCategoryName } from '../../mockData/dataApi';
+import { RecipeCard } from '../constants/Layout';
+import { getIngredientUrl, getRecipesByIngredient, getCategoryName } from '../mockData/dataApi';
 
 export default class IngredientScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {

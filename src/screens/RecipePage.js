@@ -2,9 +2,9 @@ import React from 'react';
 import { FlatList, ScrollView, Text, View, TouchableOpacity, Image, Dimensions, TouchableHighlight, StyleSheet } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
-import { getIngredientName, getCategoryName, getCategoryById } from '../../mockData/dataApi';
-import BackButton from '../../components/BackButton/BackButton';
-import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
+import { getIngredientName, getCategoryName, getCategoryById } from '../mockData/dataApi';
+import BackButton from '../components/BackButton';
+import ViewIngredientsButton from '../components/ViewIngredientsButton';
 
 
 const { width: viewportWidth } = Dimensions.get('window');
@@ -33,7 +33,7 @@ export default class RecipeScreen extends React.Component {
   renderImage = ({ item }) => (
     <TouchableHighlight>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{ uri: item }} />
+        <Image style={styles.pic} source={{ uri: item }} />
       </View>
     </TouchableHighlight>
   );
@@ -86,9 +86,9 @@ export default class RecipeScreen extends React.Component {
             />
           </View>
         </View>
-        <View style={styles.infoRecipeContainer}>
-          <Text style={styles.infoRecipeName}>{item.title}</Text>
-          <View style={styles.infoContainer}>
+        <View style={styles.recipeInfoContainer}>
+          <Text style={styles.recipeInfoName}>{item.title}</Text>
+          <View style={styles.containerInfo}>
             <TouchableHighlight
               onPress={() => navigation.navigate('RecipesList', { category, title })}
             >
@@ -96,12 +96,12 @@ export default class RecipeScreen extends React.Component {
             </TouchableHighlight>
           </View>
 
-          <View style={styles.infoContainer}>
-            <Image style={styles.infoPhoto} source={require('../../../assets/img/timeIcon.png')} />
-            <Text style={styles.infoRecipe}>{item.time} minutes </Text>
+          <View style={styles.containerInfo}>
+            <Image style={styles.picInfo} source={require('../../assets/img/timeIcon.png')} />
+            <Text style={styles.recipeInfo}>{item.time} minutes </Text>
           </View>
 
-          <View style={styles.infoContainer}>
+          <View style={styles.containerInfo}>
             <ViewIngredientsButton
               onPress={() => {
                 let ingredients = item.ingredients;
@@ -110,7 +110,7 @@ export default class RecipeScreen extends React.Component {
               }}
             />
           </View>
-          <View style={styles.infoContainer}>
+          <View style={styles.containerInfo}>
             <Text style={styles.infoDescriptionRecipe}>{item.description}</Text>
           </View>
         </View>
@@ -129,7 +129,7 @@ var styles = StyleSheet.create({
   },
   carousel: {},
 
-  image: {
+  pic: {
     ...StyleSheet.absoluteFillObject,
     width: '100%',
     height: 250
@@ -153,14 +153,14 @@ var styles = StyleSheet.create({
     borderRadius: 4,
     marginHorizontal: 0
   },
-  infoRecipeContainer: {
+  recipeInfoContainer: {
     flex: 1,
     margin: 25,
     marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center'
   },
-  infoContainer: {
+  containerInfo: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -172,12 +172,12 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  infoPhoto: {
+  picInfo: {
     height: 20,
     width: 20,
     marginRight: 0
   },
-  infoRecipe: {
+  recipeInfo: {
     fontSize: 14,
     fontWeight: 'bold',
     marginLeft: 5,
@@ -194,7 +194,7 @@ var styles = StyleSheet.create({
     marginTop: 30,
     margin: 15
   },
-  infoRecipeName: {
+  recipeInfoName: {
     fontSize: 28,
     margin: 10,
     fontWeight: 'bold',
