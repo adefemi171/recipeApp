@@ -3,8 +3,8 @@ import { FlatList, ScrollView, Text, View, TouchableOpacity, Image, Dimensions, 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import { getIngredientName, getCategoryName, getCategoryById } from '../mockData/dataApi';
-import BackButton from '../components/BackButton';
-import ViewIngredientsButton from '../components/ViewIngredientsButton';
+import BackButton from '../components/Back';
+import ViewIngredientsButton from '../components/ViewIngredient';
 
 
 const { width: viewportWidth } = Dimensions.get('window');

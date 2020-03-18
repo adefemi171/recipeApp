@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-import MenuButton from '../components/MenuButton';
+import MenuButton from '../components/Menu';
 
 export default class DrawerContainer extends React.Component {
   render() {

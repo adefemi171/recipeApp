@@ -45,10 +45,10 @@ JavaScript (React Native), Generated Data from [Firebase Firestore](https://www.
         📦node_modules
         📦src
             ┣ 📦components
-                ┗ 📜BackButton.js
-                ┗ 📜MenuButton.js
-                ┗ 📜MenuImage.js
-                ┗ 📜ViewIngredientsButton.js
+                ┗ 📜Back.js
+                ┗ 📜Menu.js
+                ┗ 📜MenuPic.js
+                ┗ 📜ViewIngredient.js
             ┣ 📦constants
                 ┗ 📜AppStyles.js
             ┣ 📦mockData

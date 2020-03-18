@@ -3,7 +3,7 @@ import { FlatList, ScrollView, Text, View, TouchableHighlight, Image, StyleSheet
 
 import { RecipeCard } from '../constants/Layout';
 import { recipes } from '../mockData/data';
-import MenuImage from '../components/MenuImage';
+import MenuImage from '../components/MenuPic';
 import DrawerActions from 'react-navigation';
 import { getCategoryName } from '../mockData/dataApi';
 
