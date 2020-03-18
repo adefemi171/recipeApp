@@ -59,7 +59,7 @@ var styles = StyleSheet.create({
     borderRadius: 20,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-    shadowColor: 'blue',
+    shadowColor: 'black',
     shadowOffset: {
       width: 0,
       height: 3
