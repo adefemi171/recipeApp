@@ -4,7 +4,7 @@
 
 # App Details
 
-Create a simple iOS application (React Native) for recipes. The app will support categories & recipes, and all the data is fetched from Firebase Firestore.
+Create a simple cross platform application (React Native) for recipes. The app will support categories & recipes, and all the data is fetched from Firebase Firestore.
 
 The app will consist of:
 
